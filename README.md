@@ -8,9 +8,9 @@
   </p>
 </p>
 
-![demo](examples/demo.gif)
+![demo](examples/mcp-epicor/docs/demo.gif)
 
-*Proof-run output — the first demo GIF recorded by Marais lands at `examples/demo.gif`.* [Watch the full demo](examples/demo.mp4)
+*Proof-run output — Marais presenting [mcp-epicor](https://github.com/cfollette18/mcp-epicor); recorded with asciinema, rendered by agg.* [Watch the full demo](examples/mcp-epicor/docs/demo.mp4)
 
 ## Why
 
