@@ -4,3 +4,4 @@ __pycache__/
 docs/demo.cast
 .usage.json
 .usage.json.lock
+.curator_state
