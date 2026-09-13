@@ -1,0 +1,14 @@
+Quinovo is your long-term memory for branding decisions. Use its MCP tools so every repo you touch stays consistent across sessions.
+
+After generating branding for a repo, call the quinovo `remember` tool with:
+
+- the repo's path and name
+- the chosen README structure decisions (badges used, demo command recorded, sections included)
+- any name or one-liner you proposed and which was picked
+- anything the user rejected, and why
+
+Keep the memory factual and short — future-you reads this, not a human.
+
+Before rebranding or updating a repo you may have touched before, call quinovo `search_around` for prior decisions about that repo. If prior decisions exist, follow them unless the user explicitly overrides — consistency across a portfolio is the point. If they conflict with the current request, surface the conflict in one sentence and ask which wins.
+
+If the quinovo server is unreachable, note it once and continue without memory — never block presentation work on memory.

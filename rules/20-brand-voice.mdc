@@ -1,0 +1,21 @@
+Brand voice rules for naming and describing repositories.
+
+Names:
+
+- lowercase-hyphenated (e.g. `marais`, `tin-whistle`).
+- Prefer ≤3 syllables. Must be pronounceable on a phone call without spelling it.
+- Evocative, not descriptive: a district, a tool, a texture — not "readme-generator-cli".
+- Before proposing a name, check it is not a famous existing project (web search the name + "github"). Discard collisions with anything >1k stars or any well-known product.
+- The name does not need to explain the project. The one-liner does that job.
+
+One-line descriptions:
+
+- ≤120 characters.
+- Lead with what it DOES, not what it is: "Gives every repo a recruiter-ready face" — never "A tool for generating READMEs".
+- Present tense, active verb in the first three words.
+- One concrete detail (a number, a target, a mechanism) beats any adjective.
+- No exclamation marks. No emoji. No "simple", "easy", "powerful", or "cutting-edge".
+
+Topics (GitHub repo topics): 5–8 lowercase tags mixing stack, domain, and audience.
+
+Attribution: Clinton Follette is the only name that ever appears. No AI-assistant mentions, no co-author trailers, anywhere — including commit messages, file headers, and READMEs.

@@ -1,0 +1,77 @@
+# Marais Hermes profile configuration.
+# Copy (do not symlink) into ~/.hermes/profiles/marais/config.yaml — Hermes may
+# rewrite this file at runtime, so the repo copy stays the pristine template.
+
+model:
+  default: MiniMax-M3
+  provider: minimax
+  base_url: https://api.minimax.io/anthropic
+fallback_providers: []
+
+toolsets:
+  - file
+  - terminal
+  - web
+  - skills
+  - todo
+
+agent:
+  max_turns: 60
+  gateway_timeout: 1800
+  restart_drain_timeout: 60
+  api_max_retries: 3
+  service_tier: ''
+  tool_use_enforcement: auto
+  verify_on_stop: false
+  gateway_timeout_warning: 900
+  gateway_notify_interval: 180
+  gateway_auto_continue_freshness: 3600
+  image_input_mode: auto
+  disabled_toolsets:
+    - browser
+    - image_gen
+    - video_gen
+    - tts
+    - kanban
+    - cronjob
+    - homeassistant
+    - spotify
+    - discord
+    - computer_use
+  verbose: false
+  reasoning_effort: medium
+
+terminal:
+  backend: local
+  timeout: 180
+  persistent_shell: true
+
+# Allowlisted shell hooks without an interactive consent prompt. The scope
+# guard is part of the harness; it is reviewed here, in version control.
+hooks_auto_accept: true
+
+hooks:
+  pre_tool_call:
+    - matcher: ".*(write|edit|patch).*"
+      command: "/home/cfollette18/projects/marais/hooks/guard_scope.sh"
+      timeout: 30
+
+mcp_servers:
+  quinovo:
+    command: /home/cfollette18/projects/Quinovo/.venv/bin/quinovo
+    args:
+      - mcp
+      - --pack
+      - /home/cfollette18/projects/Quinovo/packs/world
+      - --db
+      - /home/cfollette18/projects/Quinovo/.data/world.sqlite
+    connect_timeout: 30
+
+plugins:
+  enabled:
+    - observability/langfuse
+    - quinovo
+  disabled: []
+  entries:
+    quinovo:
+      allow_tool_override: false

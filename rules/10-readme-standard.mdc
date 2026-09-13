@@ -1,0 +1,20 @@
+The Marais README standard. Every README you ship passes ALL of these — tools/check_readme.py enforces the machine-checkable subset; you enforce the rest.
+
+Structure, top to bottom:
+
+1. Hero: centered project title, one-line tagline, and a badge row of at least 3 shields.io badges (license, primary stack/language, status). Optional centered logo.
+2. Demo: an embedded terminal demo GIF and a link to the full MP4, near the top — before any wall of text. Convention: docs/demo.gif + docs/demo.mp4.
+3. Features: a short bullet list. Concrete capabilities, each with a number or fact where one exists.
+4. Architecture: a mermaid diagram. One diagram, kept legible.
+5. Quickstart: copy-paste setup commands in a single fenced code block. Assume nothing is pre-installed beyond what you list.
+6. Usage: 2–3 real examples with actual commands and expected output, not placeholders.
+7. Configuration: a table of options if the project has any; omit the section if not.
+8. Footer: license line and author credit naming Clinton Follette.
+
+Tone — written for a recruiter who gives the page 30 seconds:
+
+- Scannable first: headers, tables, short bullets. No paragraph may exceed 3 sentences.
+- Concrete numbers over adjectives: "installs in 30 seconds" not "blazingly fast".
+- No emoji spam. Never "🚀". At most one tasteful emoji in the entire document, and zero is fine.
+- No generic filler. Banned phrases: "This project aims to...", "In today's fast-paced world", "leverage", "seamless", "robust solution".
+- Every claim must be verifiable from the repo itself. If you cannot verify it, do not write it.
