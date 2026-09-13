@@ -51,8 +51,10 @@ Then present any repo:
 
 ```bash
 cd /path/to/target-repo
-hermes -p marais -z "Give this repo a recruiter-ready README"
+hermes -p marais chat -q "Give this repo a recruiter-ready README" -Q
 ```
+
+Use `chat -q`, not `-z`: one-shot mode skips Hermes' plugin manager, so Langfuse tracing only fires in chat runs.
 
 `install.sh` is idempotent: it creates the `marais` profile, links the rules and skills, installs the config, symlinks the shared `.env`, verifies the Langfuse dependency, and prints the exact follow-up commands.
 

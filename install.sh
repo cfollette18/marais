@@ -118,6 +118,8 @@ Marais is installed. Next steps:
 
   2. Present a repo (from inside the target repository):
        cd /path/to/target-repo
-       hermes -p marais -z "Give this repo a recruiter-ready README"
+       hermes -p marais chat -q "Give this repo a recruiter-ready README" -Q
+     (Use chat, not -z: one-shot mode skips the plugin manager, so Langfuse
+      tracing only fires in chat runs.)
 
 EOF
